@@ -80,11 +80,67 @@ nav ul li {
 
 
 /* Projects */
-
+#projects {
+    background-color: orange;
+}
 
 /* Skills */
+#skills {
+    background-color: green;
+}
+
+#skills-grid {
+    display: grid;
+    grid-template-areas: 
+    'fe-head' 'be-head' 'ot-head'
+    'fe-skills' 'be-skills' 'ot-skills';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+
+}
+
+#skills-grid > h3:nth-child(1) {
+    color:blue;
+    grid-area: 'fe-head';
+}
+
+#skills-grid > h3:nth-child(2) {
+    color:red;
+    grid-area: 'be-head';
+}
+
+#skills-grid > h3:nth-child(3) {
+    color:white;
+    grid-area: 'ot-head';
+}
+
+#skills-grid > #fe-skills-container {
+    grid-area: 'fe-skills';
+    display: flex;
+}
+
+#skills-grid > #be-skills-container {
+    grid-area: 'be-skills';
+}
+
+#skills-grid > #ot-skills-container {
+    grid-area: 'ot-skills';
+}
+
+#fe-skills-container,
+#be-skills-container,
+#ot-skills-container {
+    display:flex;
+    justify-content: space-around;
+}
+
 
 /* Contact Me */
-
+#contact_me {
+    background-color: crimson;
+}
 /* Footer */
+footer {
+    background-color: black;
+}
 

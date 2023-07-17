@@ -4,7 +4,13 @@
 }
 section h2 {
     text-align: center;
+    margin: 0;
 }
+
+body {
+    padding-top: 40px;
+}
+
 
 /* Navigation Bar */
 nav {
@@ -15,6 +21,7 @@ nav {
     top: 0;
     width: 100%;
     height: 40px;
+    z-index: 999;
     background-color: red;
 }
 
@@ -30,14 +37,12 @@ nav ul li {
 
 
 
-
 /* Hero Banner */
 #greeting-banner {
     display: flex;
     background-color: blue;
     justify-content: space-around;
     align-items: center;
-    margin-top: 40px;
 }
 
 #greeting-banner img {
@@ -96,7 +101,8 @@ nav ul li {
     'fe-skills' 'be-skills' 'ot-skills';
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr 1fr;
-
+    justify-content: center;
+    justify-items: center;
 }
 
 #skills-grid > h3:nth-child(1) {
@@ -116,7 +122,6 @@ nav ul li {
 
 #skills-grid > #fe-skills-container {
     grid-area: 'fe-skills';
-    display: flex;
 }
 
 #skills-grid > #be-skills-container {
@@ -132,6 +137,7 @@ nav ul li {
 #ot-skills-container {
     display:flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 

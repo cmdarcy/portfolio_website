@@ -1,7 +1,18 @@
 /* Universal */
+:root {
+    --maincolor: #CBA135;
+    --color2: #E2E2E2;
+    --color3: #d7d7da;
+    --textcolor: #1C0F13;
+    --accentcolor: #00A676;
+}
+
 * {
     box-sizing: border-box;
+    color: var(--textcolor);
+    text-align: center;
 }
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 0;
@@ -9,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     padding-top: 40px;
-    background-color: #E2E2E2;
+    background-color: var(--color2)
 }
 
 
@@ -23,25 +34,18 @@ nav {
     width: 100%;
     height: 40px;
     z-index: 999;
-    background-color: #CBA135;
-    color: #E2E2E2;
+    background-color: var(--maincolor);
+    color: var(--color2);
 }
 
-nav a {
-    color: #E2E2E2;
-}
-nav a:visited {
-    color: #E2E2E2;
+nav span, nav a, nav a:visited {
+    color: var(--color2)
 }
 
 nav a:hover {
-    color: #00A676;
-}
+    color: var(--accentcolor);
+} 
 
-/* #header-name {
-    text-decoration: none;
-    cursor: default;
-} */
 nav ul {
     display: flex;
     justify-content: end;
@@ -57,7 +61,7 @@ nav ul li {
 /* Hero Banner */
 #greeting-banner {
     display: flex;
-    background-color: #CBA135;
+    background-color: var(--maincolor);
     justify-content: space-around;
     align-items: center;
 }
@@ -73,10 +77,6 @@ nav ul li {
 }
 
 /* About Me */
-#about {
-    /* background-color: purple; */
-}
-
 #about-me-container {
     display: flex;
     justify-content: center;
@@ -103,7 +103,7 @@ nav ul li {
 
 /* Projects */
 #projects {
-    background-color: #bbbac647;
+    background-color: var(--color3);
 }
 
 #all-projects-container {
@@ -126,10 +126,6 @@ nav ul li {
 }
 
 /* Skills */
-#skills {
-    /* background-color: green; */
-}
-
 #skills-grid {
     display: grid;
     grid-template-areas: 
@@ -176,14 +172,13 @@ nav ul li {
 
 /* Contact Me */
 #contact_me {
-    background-color: #bbbac647;
+    background-color: var(--color3);
 }
 
 #form-container {
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 textarea {
@@ -192,14 +187,26 @@ textarea {
     margin-bottom: 20px;
 }
 
+input[type='submit'] {
+    background-color: var(--accentcolor);
+    color: var(--color2);
+    border: 1px solid var(--maincolor);
+}
+
+input, textarea {
+    text-align: start;
+}
 
 /* Footer */
 footer {
-    background-color: #CBA135;
+    background-color: var(--maincolor);
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 40px;
-    color:#E2E2E2
+}
+
+footer h4 {
+    color:var(--color2)
 }
 

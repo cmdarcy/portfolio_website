@@ -89,6 +89,25 @@ nav ul li {
     background-color: orange;
 }
 
+#all-projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    width: 75%;
+    margin: auto;
+    justify-items: center;
+
+}
+
+.project-container {
+    text-align: center
+}
+.project-container img {
+    max-width: 85%;
+    height: auto;
+    margin: auto;
+}
+
 /* Skills */
 #skills {
     background-color: green;
@@ -145,6 +164,21 @@ nav ul li {
 #contact_me {
     background-color: crimson;
 }
+
+#form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+textarea {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 /* Footer */
 footer {
     background-color: black;

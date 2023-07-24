@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">    
-    <script src="./main.js"></script>
+    <script defer src="./main.js"></script>
 </head>
 <body>
     <header>
@@ -33,9 +33,9 @@
             </div>
         </section>
 
-        <section id="about" >
+        <section id="about">
             <h2>About Me</h2>
-            <div id="about-me-container" class="flex-container">
+            <div id="about-me-container" class="flex-container hidden">
                     <img src="./resources/images/about-me2.webp" alt="wordcloud image">
                     <p>This is the about me section text. <br>
                         Here I describe myself in a couple sentences. <br>
@@ -53,7 +53,7 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            <div id="all-projects-container">
+            <div id="all-projects-container" class="hidden">
                 <div class="project-container">
                     <h3>Calc App (HTML/JS/CSS)</h3>
                     <a href="#"><img src="./resources/images/calcAppFs.jpg" alt=""></a>
@@ -72,7 +72,7 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <div id="skills-grid">
+            <div id="skills-grid" class="hidden">
                         <h3 id="frontEnd-header">Front-End</h3>
                         <div id="fe-skills-container">
                             <i class="devicon-css3-plain"></i>
@@ -102,7 +102,7 @@
 
         <section id="contact_me">
             <h2>Contact Me</h2>
-            <div id="form-container">
+            <div id="form-container" class="hidden">
                 <form action="">
                     <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="text" name="email" id="email" placeholder="Email" required>

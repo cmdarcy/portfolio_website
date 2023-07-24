@@ -30,14 +30,44 @@ h2 {
 }
 
 section {
-    padding-top: clamp(.5rem, 4vw , 3rem);
-    padding-bottom: clamp(.5rem, 4vw , 3rem);
+    padding-top: clamp(2rem, 4vw , 3rem);
+    padding-bottom: clamp(5rem, 8vw , 7rem);
+    position: relative;
 }
 
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: clamp(3rem, 6vw, 6rem)
+}
+
+.wave .shape-fill {
+    fill: var(--color3);
+}
+
+.wave .shape-fill-dark {
+    fill: var(--color2);
+}
+
+img, input, textarea {
+    border-radius: 20px;
 }
 
 /* Navigation Bar */

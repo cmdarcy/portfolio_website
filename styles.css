@@ -121,6 +121,7 @@ nav ul li {
     max-width: 45%;
     height: auto;
     padding: clamp(.5rem, 2vw, 5rem);
+    border-radius: 50px;
 }
 
 h1 {
@@ -156,60 +157,34 @@ h1 {
     background-color: var(--color3);
 }
 
-#all-projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5%;
-    width: 75%;
-    margin: auto;
-    justify-items: center;
-
-}
-
 .project-container {
     text-align: center
 }
+
 .project-container img {
-    max-width: 85%;
+    max-width: min(85%, 400px);
     height: auto;
     margin: auto;
 }
 
+.project-container > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 600px)  {
+    #all-projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5%;
+        width: 75%;
+        margin: auto;
+        justify-items: center;
+    
+    }
+}
+
 /* Skills */
-#skills-grid {
-    display: grid;
-    grid-template-areas: 
-    'fe-head' 'be-head' 'ot-head'
-    'fe-skills' 'be-skills' 'ot-skills';
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 1fr;
-    justify-content: center;
-    justify-items: center;
-}
-
-#skills-grid > h3:nth-child(1) {
-    grid-area: 'fe-head';
-}
-
-#skills-grid > h3:nth-child(2) {
-    grid-area: 'be-head';
-}
-
-#skills-grid > h3:nth-child(3) {
-    grid-area: 'ot-head';
-}
-
-#skills-grid > #fe-skills-container {
-    grid-area: 'fe-skills';
-}
-
-#skills-grid > #be-skills-container {
-    grid-area: 'be-skills';
-}
-
-#skills-grid > #ot-skills-container {
-    grid-area: 'ot-skills';
-}
 
 #fe-skills-container,
 #be-skills-container,
@@ -219,6 +194,63 @@ h1 {
     width: 100%;
 }
 
+#skills-grid > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#skills-grid i {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+#skills-grid i.devicon-nodejs-plain-wordmark {
+    font-size: clamp(3rem, 12vw, 5rem);
+}
+
+@media (min-width: 600px)  {
+    #frontEnd-header {
+        grid-area: fe-head;
+    }
+    
+    #backEnd-header {
+        grid-area: be-head;
+    }
+    
+    #otherTools-header {
+        grid-area: ot-head;
+    }
+    
+    #fe-skills-container {
+        grid-area: fe-skills;
+    }
+    
+    #be-skills-container {
+        grid-area: be-skills;
+    }
+    
+    #ot-skills-container {
+        grid-area: ot-skills;
+    }
+
+    #skills-grid {
+        display: grid;
+        grid-template-areas: 
+        'fe-head be-head ot-head'
+        'fe-skills be-skills ot-skills';
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 2fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    #fe-skills-container,
+    #be-skills-container,
+    #ot-skills-container {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    }
+}
 
 /* Contact Me */
 #contact_me {

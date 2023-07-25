@@ -20,6 +20,7 @@
     transition: all 1s;
 }
 
+
 .show {
     opacity: 1;
     filter: blur(0);
@@ -223,6 +224,12 @@ h1 {
 
 #skills-grid i.devicon-nodejs-plain-wordmark {
     font-size: clamp(3rem, 12vw, 5rem);
+}
+
+.logo-card span {
+    display: none;
+    /* opacity: 0; */
+    transition: all 1s;
 }
 
 @media (min-width: 600px)  {
